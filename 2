@@ -1,0 +1,20 @@
+#include <iostream>
+using namespace std;
+int f(int n) {
+	int desn = 0;
+	int step = 1;
+	int nn = n;
+	while (nn) {
+		int posled = nn % 10;
+		nn = nn / 10;
+		desn += posled * step;
+		step = step * 2;
+	}
+	return desn;
+	
+}
+int main() {
+	int n;
+	cin >> n;
+	cout << f(n);
+}
